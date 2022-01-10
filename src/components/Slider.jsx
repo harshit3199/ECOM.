@@ -110,7 +110,7 @@ const Arrow = styled.div`
             <Wrapper slideIndex={slideIndex}> 
                 {sliderItems.map(item=>(
 
-                    <Slide bg={item.bg}>
+                    <Slide bg={item.bg} key={item.id}>
                 <ImageContainer ><Img src={item.img} /></ImageContainer>          
 
                 <InfoCotainer> <Title>{item.title}</Title>
