@@ -5,7 +5,7 @@ import {sliderItems} from '../data'
 
 const Container =styled.div`
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     display:flex;
     position: relative;
     overflow: hidden;
@@ -40,7 +40,7 @@ const Arrow = styled.div`
     display: flex;
     align-items: center;
     width:100vw;
-    height:100vh;
+    height:90vh;
     background-color: ${props=>props.bg};
     
     `;

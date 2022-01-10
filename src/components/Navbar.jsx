@@ -33,6 +33,9 @@ const SearchContainer = styled.div`
 `;
 const Input = styled.input`
   border: none;
+  :focus{
+    outline: none;
+  }
 `;
 
 const Center = styled.div`
@@ -42,6 +45,7 @@ const Center = styled.div`
 
 const Logo = styled.div`
   font-weight: bold;
+  font-size: 30px;
 `;
 
 const MenuItem = styled.div`
