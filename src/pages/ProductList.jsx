@@ -14,15 +14,15 @@ margin: 20px;
 const ProductLIst = () => {
   return (
     <Container>
-      <Navbar />
       <Announcement />
+      <Navbar />
       <Title>Dresses</Title>
-      <FilterItem/>
-      <Products/>
-      <NewsLetter/>
-      <Footer/>
+      <FilterItem />
+      <Products />
+      <NewsLetter />
+      <Footer />
     </Container>
-    
+
   );
 };
 
