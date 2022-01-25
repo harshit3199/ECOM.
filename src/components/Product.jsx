@@ -5,6 +5,7 @@ import {
   FavoriteBorderOutlined,
   SearchOutlined
 } from "@material-ui/icons";
+import {mobile} from "../responsive"
 
 const Info = styled.div`
 opacity: 0;
@@ -43,6 +44,11 @@ const Container = styled.div`
       transform: scale(1.1);
       transition: all 0.5s ease;
   }
+  ${mobile({
+    transform: "scale(0.9)",
+    height: "300px",
+    minWidth: "300px",
+  })}
 `;
 const Circle = styled.div`
     width: 200px;

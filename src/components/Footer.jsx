@@ -1,11 +1,14 @@
 import { EmailRounded, Facebook, Instagram, Phone, Pinterest, Room, Twitter } from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
+  ${mobile({
+    flexDirection: "column",
+    
+  })}
 `;
 const Left = styled.div`
   flex: 1;
@@ -36,11 +39,17 @@ const Center = styled.div`
   flex: 1;
   padding: 20px;
   text-align: center;
+  ${mobile({
+    display: "none",
+  })}
 `;
 
 const Title = styled.h3`
 margin-bottom:30px;
 text-align: center;
+${mobile({
+    paddingTop: "5px",
+  })}
 `;
 
 const List = styled.ul`
@@ -59,12 +68,21 @@ margin-bottom: 10px;
 const Right = styled.div`
   flex: 1;
   padding: 20px;
+  ${mobile({
+    padding: "5px",
+    backgroundColor: "#e8f1f0",
+    paddingTop: "5px",
+  })}
 `;
 
 const ContactItem = styled.div`
 display: flex;
 margin-bottom: 20px;
 padding-left: 40px;
+${mobile({
+    paddingLeft: "5px",
+    marginBottom: "5px",
+  })}
 
 `;
 const Icon = styled.div`
