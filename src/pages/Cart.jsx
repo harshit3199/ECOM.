@@ -6,9 +6,13 @@ import NewsLetter from "../components/NewsLetter";
 import Footer from "../components/Footer";
 import img from "../Assets/Images/product.jpg";
 import { Add, Remove } from "@material-ui/icons";
+import {mobile} from "../responsive"
 const Container = styled.div``;
 const Wrapper = styled.div`
   padding: 20px;
+  ${mobile({
+    padding:"10px"
+  })}
 `;
 const Title = styled.h1`
   font-weight: 300;
@@ -35,6 +39,9 @@ const TopTextDiv = styled.div`
   align-items: center;
   text-decoration: underline;
   cursor: pointer;
+  ${mobile({
+    display:"none"
+  })}
 `;
 const TopText = styled.p`
   margin: 0 20px;
@@ -45,6 +52,9 @@ const TopText = styled.p`
 const Bottom = styled.div`
   display: flex;
   justify-content: space-between;
+  ${mobile({
+    flexDirection:"column",
+  })}
 `;
 const Info = styled.div`
   flex: 3;
@@ -52,13 +62,20 @@ const Info = styled.div`
 const Product = styled.div`
   display: flex;
   justify-content: space-between;
+  ${mobile({
+    flexDirection: "column"
+  })}
 `;
 const ProductDetail = styled.div`
   flex: 1;
   display: flex;
+  
 `;
 const Image = styled.img`
   width: 400px;
+  ${mobile({
+    width: "200px"
+  })}
 `;
 const Details = styled.div`
   display: flex;
@@ -67,6 +84,9 @@ const Details = styled.div`
   padding: 20px;
   padding-left: 40px;
   flex-direction: column;
+  ${mobile({
+    paddingLeft: "10px"
+  })}
 `;
 const ProductName = styled.span``;
 const ProductId = styled.span``;
@@ -82,12 +102,15 @@ const ProductAmountContainer = styled.div`
   align-items: center;
 `;
 const ProductAmount = styled.span`
-  font-size: 30px;
+  font-size: 20px;
   margin: 5px;
 `;
 const ProductPrice = styled.span`
   font-size: 40px;
   font-weight: 600;
+  ${mobile({
+    fontSize: "20px"
+  })}
 `;
 const PriceDetail = styled.div`
   flex: 1;
@@ -95,6 +118,10 @@ const PriceDetail = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  ${mobile({
+    flexDirection: "row",
+    justifyContent: "space-between"
+  })}
 `;
 const Hr = styled.hr`
   width: 100%;
@@ -112,6 +139,9 @@ const Summary = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  ${mobile({
+    margin:"10px 0"
+  })}
 `;
 const SummaryTitle = styled.span`
  font-weight: 400;

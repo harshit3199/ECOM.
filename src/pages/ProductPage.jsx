@@ -5,26 +5,41 @@ import Announcement from "../components/Announcement";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import NewsLetter from "../components/NewsLetter";
+import { mobile } from "../responsive";
+import img from "../Assets/Images/product.jpg";
 
 const Container = styled.div``;
 const Wrapper = styled.div`
   padding: 50px;
   display: flex;
+  ${mobile({
+    flexDirection:"column",
+    padding:"20px",
+  })}
 `;
 const ImageContainer = styled.div`
   flex: 1;
 `;
 const Image = styled.img`
-  height: 80vh;
+  height: 60vh;
   width: 100%;
   object-fit: cover;
+  ${mobile({
+    height:"45vh"
+  })}
 `;
 const InfoContainer = styled.div`
   flex: 1;
   padding: 0 50px;
+  ${mobile({
+    padding:"0"
+  })}
 `;
 const Description = styled.p`
   margin: 20px 0;
+  ${mobile({
+    margin:"10px 0"
+  })}
 `;
 const Title = styled.h1`
   font-weight: 200;
@@ -38,6 +53,10 @@ const FilterContainer = styled.div`
   justify-content: space-between;
   margin: 30px 0;
   width: 50%;
+  ${mobile({
+    margin: "20px 0",
+    width: "100%",
+  })}
 `;
 const Filter = styled.div`
   display: flex;
@@ -50,6 +69,10 @@ const FilterColor = styled.div`
   background-color: ${(props) => props.color};
   margin-right: 10px;
   cursor: pointer;
+  ${mobile({
+    width:"20px",
+    height: "20px"
+  })}
 `;
 const FilterItem = styled.span`
   font-size: 20px;
@@ -80,9 +103,13 @@ const Amount = styled.span`
 `;
 const ButtonContainer = styled.div`
   display: flex;
-  padding: 20px;
   padding: 40px 0;
   width: 70%;
+  ${mobile({
+    width:"100%",
+    justifyContent: "space-between",
+
+  })}
 `;
 const Button = styled.button`
   width: 150px;
@@ -91,11 +118,14 @@ const Button = styled.button`
   font-weight: 700;
   font-size: 30px;
   border: 1px solid black;
-  border-radius: 10px;
+  border-radius: 15px;
   color: white;
   box-shadow: none;
   background-color: teal;
   cursor: pointer;
+  ${mobile({
+    height:"70px"
+  })}
 `;
 
 const ProductPage = () => {
@@ -105,7 +135,7 @@ const ProductPage = () => {
       <Navbar />
       <Wrapper>
         <ImageContainer>
-          <Image src="../Assets/Images/1" />
+          <Image src={img} />
         </ImageContainer>
         <InfoContainer>
           <Title>Lorem, ipsum dolor.</Title>
