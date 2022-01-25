@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
-
+import {mobile} from "../responsive";
 
 const Container = styled.div`
   width: 100vw;
@@ -27,6 +27,10 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  ${mobile({
+    width: "50%",
+    height: "50%"
+  })}
 `;
 const Title = styled.h1`
   color: #fff;
@@ -36,6 +40,13 @@ const Title = styled.h1`
   letter-spacing: 1px;
   text-align: center;
   margin: 10px;
+  ${mobile({
+    fontSize: "40px",
+    fontSpacing: " 0.7px",
+    margin: "8px",
+
+
+  })}
 `;
 const Form = styled.form`
   width: 100%;
@@ -60,6 +71,9 @@ const Input = styled.input`
     box-shadow: inset 0 -5px 45px rgba(100, 100, 100, 0.4),
       0 1px 1px rgba(255, 255, 255, 0.2);
   }
+  ${mobile({
+    marginBottom:"15px",
+  })}
 `;
 
 const Button = styled.button`

@@ -3,6 +3,7 @@ import { teal } from "@material-ui/core/colors";
 import { CheckBoxOutlineBlankRounded } from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
+import {mobile} from "../responsive"
 
 const Container = styled.div`
   width: 100vw;
@@ -29,6 +30,10 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  ${mobile({
+    width: "50%",
+    height: "50%"
+  })}
 `;
 const Title = styled.h1`
   color: #fff;
@@ -38,6 +43,13 @@ const Title = styled.h1`
   letter-spacing: 1px;
   text-align: center;
   margin: 10px;
+  ${mobile({
+    fontSize: "40px",
+    fontSpacing: " 0.7px",
+    margin: "8px",
+
+
+  })}
 `;
 const Form = styled.form`
   width: 100%;
@@ -67,6 +79,11 @@ const Agreement = styled.div`
   color: white;
   font-size: 20px;
   margin: 20px 0px;
+  ${mobile({
+    fontSize:"10px",
+    margin: "15px 0",
+    marginTop: "-5px"
+  })}
 
 `;
 const Button = styled.button`
@@ -93,12 +110,12 @@ const Register = () => {
       <Wrapper>
         <Title>Register</Title>
         <Form>
-          <Input paceholder="Name" />
-          <Input paceholder="Username" />
-          <Input paceholder="Email" />
-          <Input paceholder="Phone Number" />
-          <Input paceholder="Password" />
-          <Input paceholder="Confirm Password" />
+          <Input placeholder="Name" />
+          <Input placeholder="Username" />
+          <Input placeholder="Email" />
+          <Input placeholder="Phone Number" />
+          <Input placeholder="Password" />
+          <Input placeholder="Confirm Password" />
           <Agreement>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non
             dolores, sint ipsa nulla nam vitae dicta itaque amet dolorum?
