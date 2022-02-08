@@ -113,7 +113,7 @@ const Login = () => {
         <Title>Log In</Title>
         <Form>
          
-          <Input paceholder="Username" />
+          <Input paceholder="Email" />
           <Input paceholder="Password" />
           <Button>Log In</Button>
           <Links>
